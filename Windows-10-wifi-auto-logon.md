@@ -9,7 +9,7 @@ Obviously, the next question is how I can utilize this feature. According to [th
 3. How to filter out the correct event for "require log on"?
 It is easy to narrow down relevant events based the time when the balloon pops up. After looking into event details, the exact event has Event ID 4042 and CapabilityChangeReason 7 (ActiveHttpProbeFailedHotspotDetected). "Create Basic Task Wizard" only filter events based on Log and Event ID. This is not enough because events we don't want ("ActiveHttpProbeSucceeded", "CapabilityReset", etc) are also recorded under ID 4042.   
 &nbsp;&nbsp;&nbsp;&nbsp;A Windows task is kept in XML format. However, you cannot edit the XML file (under C:\Windows\System32\Tasks) directly for security reason (maybe a hash check?). You can either import a task from a XML file or perform some XML editing in task scheduler. A [event triggered task](https://msdn.microsoft.com/en-us/library/windows/desktop/aa446889(v=vs.85).aspx) has an EventTrigger object. This object has a child element of event subscription query. [Event Selection](https://msdn.microsoft.com/en-us/library/aa385231(VS.85).aspx) will be performed here. "Filters can be used in XPath event queries." Therefore, we can filter out the correct event for "require log on" like this:
-```
+```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-NCSI/Operational">
     <Select Path="Microsoft-Windows-NCSI/Operational">
@@ -20,7 +20,7 @@ It is easy to narrow down relevant events based the time when the balloon pops u
 ```
 4. The action for http request.
 Windows CMD.EXE/COMMAND.COM doesn't have commands for http request. PowerShell's Invoke-WebRequest (alias: iwr, curl, wget) will be used. "powershell" is a command that can be recognized by task action (without absolute path). For authentication, I need to submit a https request but don't really need the response for anything.
-```
+```Batchfile
 powershell -NoLogo -NonInteractive "& {Invoke-WebRequest https://auth.myuniversity.edu/logon > $NULL}"
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;Other settings for the task can use defaults
@@ -29,7 +29,7 @@ powershell -NoLogo -NonInteractive "& {Invoke-WebRequest https://auth.myuniversi
 &nbsp;&nbsp;&nbsp;&nbsp;Now, the wifi balloon still pops up and the http request is triggered correctly. However, Windows now disconnects itself from the network even though I've already been authenticated. I will need to connect again manually. I don't need to log on though because the automatic task works which gets me authenticated. [Similar problems](https://superuser.com/questions/1169229/why-does-windows-connect-to-a-network-automatically-and-shortly-thereafter-disco) have been seen. A general conclusion is that this comes from the school's Captive Portal. I've also looked into things like "[disable IEEE 802.1X authentication](https://answers.microsoft.com/en-us/windows/forum/windows_7-networking/network-keeps-disconnecting-from-laptop-windows-7/1338d169-9fcc-4a05-87e8-60e0f1aa0bdf)". No luck there.  
 **Temporary Solution**  
 &nbsp;&nbsp;&nbsp;&nbsp;The temporary solution still relies on Windows task. No more explains since there is nothing new (to me). The Event Filter is:
-```
+```xml
 <QueryList>
   <Query Id="0" Path="Microsoft-Windows-NetworkProfile/Operational">
     <Select Path="Microsoft-Windows-NetworkProfile/Operational">
@@ -39,6 +39,6 @@ powershell -NoLogo -NonInteractive "& {Invoke-WebRequest https://auth.myuniversi
 </QueryList>
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;The action is:
-```
+```Batchfile
 netsh wlan connect name=myuniversity
 ```
