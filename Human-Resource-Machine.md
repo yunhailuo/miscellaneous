@@ -5,7 +5,7 @@ This collection is just my own solutions, not necessarily the best. For the best
 ### Notes:
 1. Two interesting ideas/concepts I've learned from others:
    * "[Loop unrolling](https://en.wikipedia.org/wiki/Loop_unrolling)": a space-time tradeoff which optimize speed at the expense of size. Learned from the [Steam forum](https://steamcommunity.com/app/375820/discussions/0/483367798502748659/) and used in the [solution for year 2](human-resource-machine-solutions/02-Busy-Mail-Room-5.25.txt)
-   * Optimize speed by jumping back (save one jump step) and skipping the first output: learned from [another solution](https://github.com/atesgoral/hrm-solutions/blob/master/solutions/09-Zero-Preservation-Initiative-5.25/5.25-nanashi-juanto.asm) and used in solutions for [year 9](human-resource-machine-solutions/09-Zero-Preservation-Initiative-5.25.txt), [year 13](human-resource-machine-solutions/13-Equalization-Room-9.27.txt) and [year 16]](human-resource-machine-solutions/16-Absolute-Positivity-8.34.txt). To understand the difference, compare the following two:
+   * Optimize speed by jumping back (save one jump step) and skipping the first output: learned from [another solution](https://github.com/atesgoral/hrm-solutions/blob/master/solutions/09-Zero-Preservation-Initiative-5.25/5.25-nanashi-juanto.asm) and used in solutions for [year 9](human-resource-machine-solutions/09-Zero-Preservation-Initiative-5.25.txt), [year 13](human-resource-machine-solutions/13-Equalization-Room-9.27.txt) and [year 16](human-resource-machine-solutions/16-Absolute-Positivity-8.34.txt). To understand the difference, compare the following two:
       * Straightforward code
 
             a:
