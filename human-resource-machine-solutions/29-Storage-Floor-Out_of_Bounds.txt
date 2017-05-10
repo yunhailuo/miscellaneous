@@ -1,0 +1,8 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+    COPYFROM 12
+    ADD      12
+    COPYTO   12
+    COPYFROM [12]
+
+

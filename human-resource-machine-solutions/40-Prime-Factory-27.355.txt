@@ -1,0 +1,39 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 40-Prime-Factory - SIZE 27/28 - SPEED 355/399 --
+-- Initialize a slot for odd number used after processing factor 2 --
+
+    COPYFROM 24
+a:
+    COPYTO   19
+    BUMPUP   19
+    COPYTO   23
+    BUMPUP   23
+    INBOX   
+b:
+    COPYTO   22
+c:
+    COPYFROM 24
+    COPYTO   20
+    COPYFROM 22
+d:
+    SUB      23
+    JUMPZ    f
+    JUMPN    e
+    COPYTO   21
+    BUMPUP   20
+    COPYFROM 21
+    JUMP     d
+e:
+    BUMPUP   19
+    BUMPUP   19
+    COPYTO   23
+    JUMP     c
+f:
+    COPYFROM 23
+    OUTBOX  
+    COPYFROM 20
+    JUMPZ    a
+    BUMPUP   20
+    JUMP     b
+
+

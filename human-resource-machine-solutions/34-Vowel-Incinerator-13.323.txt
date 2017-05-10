@@ -1,0 +1,22 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 34-Vowel-Incinerator - SIZE 13/13 - SPEED 323/323 --
+
+a:
+b:
+    COPYFROM 5
+    COPYTO   6
+    INBOX   
+    COPYTO   7
+c:
+    COPYFROM [6]
+    JUMPZ    d
+    SUB      7
+    JUMPZ    b
+    BUMPUP   6
+    JUMP     c
+d:
+    COPYFROM 7
+    OUTBOX  
+    JUMP     a
+
+

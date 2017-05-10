@@ -1,0 +1,23 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 23-The-Littlest-Number - SIZE 13/13 - SPEED 75/75 --
+
+a:
+    INBOX   
+    COPYTO   0
+b:
+c:
+    INBOX   
+    JUMPZ    e
+    SUB      0
+    JUMPN    d
+    JUMP     c
+d:
+    ADD      0
+    COPYTO   0
+    JUMP     b
+e:
+    COPYFROM 0
+    OUTBOX  
+    JUMP     a
+
+

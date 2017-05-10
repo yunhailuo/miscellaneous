@@ -1,0 +1,12 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 02-Busy-Mail-Room - SIZE 5/3 - SPEED 25/25 --
+-- Uses the idea of "loop unrolling" from https://steamcommunity.com/app/375820/discussions/0/483367798502748659/ --
+
+a:
+    INBOX   
+    OUTBOX  
+    INBOX   
+    OUTBOX  
+    JUMP     a
+
+

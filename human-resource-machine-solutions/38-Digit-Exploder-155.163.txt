@@ -1,0 +1,190 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 38-Digit-Exploder - SIZE 155/30 - SPEED 163/165 --
+
+a:
+b:
+c:
+    INBOX   
+    SUB      11
+    JUMPN    u
+    COPYTO   0
+    COPYFROM 9
+    COPYTO   7
+    COPYTO   6
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    d
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    k
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    j
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    i
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    h
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    g
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    f
+    COPYTO   0
+    BUMPUP   6
+    COPYFROM 0
+    SUB      11
+    JUMPN    e
+    COPYTO   0
+    BUMPUP   6
+d:
+e:
+f:
+g:
+h:
+i:
+j:
+k:
+    COPYFROM 6
+    OUTBOX  
+    COPYFROM 0
+    SUB      10
+    JUMPN    l
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    t
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    s
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    r
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    q
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    p
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    o
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    n
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    m
+    COPYTO   0
+    BUMPUP   7
+l:
+m:
+n:
+o:
+p:
+q:
+r:
+s:
+t:
+    COPYFROM 7
+    OUTBOX  
+    COPYFROM 0
+    OUTBOX  
+    JUMP     b
+u:
+    ADD      11
+    SUB      10
+    JUMPN    ad
+    COPYTO   0
+    COPYFROM 9
+    COPYTO   7
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    v
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    ac
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    ab
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    aa
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    z
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    y
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    x
+    COPYTO   0
+    BUMPUP   7
+    COPYFROM 0
+    SUB      10
+    JUMPN    w
+    COPYTO   0
+    BUMPUP   7
+v:
+w:
+x:
+y:
+z:
+aa:
+ab:
+ac:
+    COPYFROM 7
+    OUTBOX  
+    COPYFROM 0
+    OUTBOX  
+    JUMP     a
+ad:
+    ADD      10
+    OUTBOX  
+    JUMP     c
+
+

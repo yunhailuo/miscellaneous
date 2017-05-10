@@ -1,0 +1,28 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 22-Fibonacci-Visitor - SIZE 19/19 - SPEED 152/156 --
+
+a:
+    INBOX   
+    COPYTO   0
+    COPYFROM 9
+    COPYTO   1
+    COPYTO   2
+    BUMPUP   2
+b:
+    OUTBOX  
+    COPYFROM 2
+    ADD      1
+    COPYTO   2
+    SUB      1
+    COPYTO   1
+    COPYFROM 2
+    SUB      0
+    JUMPN    d
+    JUMPZ    c
+    JUMP     a
+c:
+d:
+    ADD      0
+    JUMP     b
+
+

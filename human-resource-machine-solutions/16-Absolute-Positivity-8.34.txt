@@ -1,0 +1,17 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 16-Absolute-Positivity - SIZE 8/8 - SPEED 34/36 --
+-- Save one jump back by putting outbox before inbox (https://github.com/atesgoral/hrm-solutions/blob/master/solutions/09-Zero-Preservation-Initiative-5.25/5.25-nanashi-juanto.asm). --
+
+    JUMP     c
+a:
+    COPYTO   0
+    SUB      0
+    SUB      0
+b:
+    OUTBOX  
+c:
+    INBOX   
+    JUMPN    a
+    JUMP     b
+
+

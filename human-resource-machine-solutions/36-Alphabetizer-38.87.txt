@@ -1,0 +1,56 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 36-Alphabetizer - SIZE 38/39 - SPEED 87/109 --
+
+a:
+    INBOX   
+    JUMPZ    b
+    COPYTO   [23]
+    BUMPUP   23
+    JUMP     a
+b:
+    COPYTO   [23]
+    COPYTO   22
+    COPYTO   21
+    BUMPUP   23
+    COPYTO   20
+c:
+    INBOX   
+    COPYTO   [23]
+    JUMPZ    f
+    COPYFROM [22]
+    JUMPZ    i
+    SUB      [23]
+    JUMPZ    k
+    JUMPN    h
+    BUMPUP   23
+d:
+    INBOX   
+    JUMPZ    e
+    COPYTO   [23]
+    BUMPUP   23
+    JUMP     d
+e:
+f:
+    COPYTO   [23]
+g:
+    COPYFROM [20]
+    JUMPZ    m
+    OUTBOX  
+    BUMPUP   20
+    JUMP     g
+h:
+i:
+j:
+    COPYFROM [21]
+    JUMPZ    l
+    OUTBOX  
+    BUMPUP   21
+    JUMP     j
+k:
+    BUMPUP   23
+    BUMPUP   22
+    JUMP     c
+l:
+m:
+
+

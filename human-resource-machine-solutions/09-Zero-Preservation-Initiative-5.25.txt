@@ -1,0 +1,14 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 09-Zero-Preservation-Initiative - SIZE 5/5 - SPEED 25/25 --
+-- Save one jump back by putting outbox before inbox (https://github.com/atesgoral/hrm-solutions/blob/master/solutions/09-Zero-Preservation-Initiative-5.25/5.25-nanashi-juanto.asm). --
+
+    JUMP     b
+a:
+    OUTBOX  
+b:
+c:
+    INBOX   
+    JUMPZ    a
+    JUMP     c
+
+

@@ -1,0 +1,74 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 28-Three-Sort - SIZE 58/34 - SPEED 75/78 --
+
+a:
+b:
+c:
+d:
+e:
+f:
+    INBOX   
+    COPYTO   0
+    INBOX   
+    COPYTO   1
+    SUB      0
+    JUMPN    i
+    INBOX   
+    COPYTO   2
+    SUB      0
+    JUMPN    h
+    COPYFROM 0
+    OUTBOX  
+    COPYFROM 2
+    SUB      1
+    JUMPN    g
+    COPYFROM 1
+    OUTBOX  
+    COPYFROM 2
+    OUTBOX  
+    JUMP     a
+g:
+    COPYFROM 2
+    OUTBOX  
+    COPYFROM 1
+    OUTBOX  
+    JUMP     b
+h:
+    COPYFROM 2
+    OUTBOX  
+    COPYFROM 0
+    OUTBOX  
+    COPYFROM 1
+    OUTBOX  
+    JUMP     c
+i:
+    INBOX   
+    COPYTO   2
+    SUB      1
+    JUMPN    k
+    COPYFROM 1
+    OUTBOX  
+    COPYFROM 2
+    SUB      0
+    JUMPN    j
+    COPYFROM 0
+    OUTBOX  
+    COPYFROM 2
+    OUTBOX  
+    JUMP     d
+j:
+    COPYFROM 2
+    OUTBOX  
+    COPYFROM 0
+    OUTBOX  
+    JUMP     e
+k:
+    COPYFROM 2
+    OUTBOX  
+    COPYFROM 1
+    OUTBOX  
+    COPYFROM 0
+    OUTBOX  
+    JUMP     f
+
+

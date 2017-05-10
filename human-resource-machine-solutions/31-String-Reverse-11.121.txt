@@ -1,0 +1,20 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 31-String-Reverse - SIZE 11/11 - SPEED 121/122 --
+
+a:
+    BUMPUP   14
+b:
+    INBOX   
+    JUMPZ    c
+    COPYTO   [14]
+    BUMPUP   14
+    JUMP     b
+c:
+d:
+    BUMPDN   14
+    JUMPZ    a
+    COPYFROM [14]
+    OUTBOX  
+    JUMP     d
+
+

@@ -1,0 +1,39 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 41-Sorting-Floor - SIZE 27/34 - SPEED 714/714 --
+
+    COPYFROM 24
+    COPYTO   23
+a:
+    COPYTO   20
+    COPYTO   21
+    INBOX   
+    JUMPZ    f
+    COPYTO   [20]
+b:
+    BUMPDN   21
+    JUMPN    d
+    COPYFROM [20]
+    SUB      [21]
+    JUMPN    c
+    COPYFROM [20]
+    COPYTO   22
+    COPYFROM [21]
+    COPYTO   [20]
+    COPYFROM 22
+    COPYTO   [21]
+    BUMPDN   20
+    JUMP     b
+c:
+d:
+e:
+    BUMPUP   23
+    JUMP     a
+f:
+g:
+    BUMPDN   23
+    JUMPN    e
+    COPYFROM [23]
+    OUTBOX  
+    JUMP     g
+
+

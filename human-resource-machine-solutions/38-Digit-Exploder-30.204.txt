@@ -1,0 +1,42 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 38-Digit-Exploder - SIZE 30/30 - SPEED 204/167 --
+
+a:
+    INBOX   
+    COPYTO   0
+    SUB      10
+    JUMPN    g
+    COPYFROM 0
+    SUB      11
+    JUMPN    d
+    COPYFROM 9
+    COPYTO   6
+b:
+    COPYFROM 0
+    SUB      11
+    JUMPN    c
+    COPYTO   0
+    BUMPUP   6
+    JUMP     b
+c:
+    COPYFROM 6
+    OUTBOX  
+d:
+    COPYFROM 9
+    COPYTO   7
+e:
+    COPYFROM 0
+    SUB      10
+    JUMPN    f
+    COPYTO   0
+    BUMPUP   7
+    JUMP     e
+f:
+    COPYFROM 7
+    OUTBOX  
+g:
+    COPYFROM 0
+    OUTBOX  
+    JUMP     a
+
+

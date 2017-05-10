@@ -1,0 +1,42 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 20-Multiplication-Workshop - SIZE 28/15 - SPEED 105/109 --
+
+a:
+    INBOX   
+    JUMPZ    e
+    COPYTO   0
+    INBOX   
+    JUMPZ    f
+    COPYTO   1
+    SUB      0
+    JUMPN    c
+    COPYFROM 1
+b:
+    COPYTO   2
+    BUMPDN   0
+    JUMPZ    h
+    COPYFROM 2
+    ADD      1
+    JUMP     b
+c:
+    COPYFROM 0
+d:
+    COPYTO   2
+    BUMPDN   1
+    JUMPZ    g
+    COPYFROM 2
+    ADD      0
+    JUMP     d
+e:
+    INBOX   
+f:
+    COPYFROM 9
+    JUMP     i
+g:
+h:
+    COPYFROM 2
+i:
+    OUTBOX  
+    JUMP     a
+
+

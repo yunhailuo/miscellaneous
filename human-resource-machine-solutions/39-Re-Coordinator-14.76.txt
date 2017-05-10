@@ -1,0 +1,22 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 39-Re-Coordinator - SIZE 14/14 - SPEED 76/76 --
+
+a:
+    COPYFROM 14
+    COPYTO   1
+    INBOX   
+b:
+    SUB      15
+    JUMPN    c
+    COPYTO   0
+    BUMPUP   1
+    COPYFROM 0
+    JUMP     b
+c:
+    ADD      15
+    OUTBOX  
+    COPYFROM 1
+    OUTBOX  
+    JUMP     a
+
+

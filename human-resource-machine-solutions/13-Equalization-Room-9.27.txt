@@ -1,0 +1,18 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+-- 13-Equalization-Room - SIZE 9/9 - SPEED 27/27 --
+-- Save one jump back by putting outbox before inbox (https://github.com/atesgoral/hrm-solutions/blob/master/solutions/09-Zero-Preservation-Initiative-5.25/5.25-nanashi-juanto.asm). --
+
+    JUMP     b
+a:
+    COPYFROM 0
+    OUTBOX  
+b:
+c:
+    INBOX   
+    COPYTO   0
+    INBOX   
+    SUB      0
+    JUMPZ    a
+    JUMP     c
+
+
