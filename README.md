@@ -26,3 +26,6 @@ This repository has a bunch of problems which I've been (weirdly) obsessed about
   * NetworkProfile log
   * Connect wifi in Windows cmd
 
+[Human-Resource-Machine](Human-Resource-Machine.md)
+  * Implementing basic algorithms with assembly language
+  * Optimization of assembly language
