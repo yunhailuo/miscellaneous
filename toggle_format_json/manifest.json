@@ -2,6 +2,7 @@
   "name": "Toggle Format JSON",
   "version": "1.0",
   "description": "Add parameter format=json",
+  "content_security_policy": "default-src 'self'",
   "permissions": ["activeTab", "declarativeContent"],
   "background": {
     "scripts": ["background.js"]
