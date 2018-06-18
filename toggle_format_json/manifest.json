@@ -1,6 +1,6 @@
 {
   "name": "Toggle Format JSON",
-  "version": "1.0",
+  "version": "1.0.2",
   "description": "Add parameter format=json",
   "icons": {
     "16": "images/toggle_format_json16.png",
@@ -23,7 +23,11 @@
   "commands": {
     "_execute_page_action": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y"
+        "default": "Ctrl+Shift+Y",
+        "windows": "Ctrl+Shift+Y",
+        "mac": "MacCtrl+Shift+Y",
+        "chromeos": "Ctrl+Shift+U",
+        "linux": "Ctrl+Shift+J"
       }
     }
   },
