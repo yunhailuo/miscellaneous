@@ -2,12 +2,24 @@
   "name": "Toggle Format JSON",
   "version": "1.0",
   "description": "Add parameter format=json",
+  "icons": {
+    "16": "images/toggle_format_json16.png",
+    "48": "images/toggle_format_json48.png",
+    "128": "images/toggle_format_json128.png"
+  },
   "content_security_policy": "default-src 'self'",
   "permissions": ["activeTab", "declarativeContent"],
   "background": {
     "scripts": ["background.js"]
   },
-  "page_action": {},
+  "page_action": {
+    "default_icon": {
+      "16": "images/toggle_format_json16.png",
+      "32": "images/toggle_format_json32.png",
+      "48": "images/toggle_format_json48.png",
+      "128": "images/toggle_format_json128.png"
+    }
+  },
   "commands": {
     "_execute_page_action": {
       "suggested_key": {
