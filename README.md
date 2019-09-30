@@ -49,3 +49,8 @@ This repository has a bunch of problems which I've been (weirdly) obsessed about
        export LD_PRELOAD=/usr/lib64/nvidia/libcuda.so.1
        java -Djava.library.path=/path/to/jcuda/lib64/ -jar /path/to/juicer_tools.1.7.6_jcuda.0.8.jar hiccups local/folder/HIC006.hic local/folder/hiccups_results
        ```
+
+[**tinc VPN**](tinc_VPN.md)
+ * Setup on tinc VPN node on cloud (Ubuntu 18.04 as server) and another node locally (Ubuntu 18.04 as client)
+ * Change firewall as needed with VPN start up and tear down
+ * Redirect all network traffic on client to server
